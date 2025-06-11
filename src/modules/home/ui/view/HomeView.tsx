@@ -4,7 +4,8 @@ import { authClient } from "@/lib/auth-client";
 import { useRouter } from "next/navigation";
 export default function HomeView() {
   const {data: session} = authClient.useSession();
-const router = useRouter();
+  const router = useRouter();
+
   if(!session) {
     return <p>Loading...</p>
   }
